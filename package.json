@@ -1,0 +1,26 @@
+{
+  "name": "piano-notes",
+  "version": "0.0.1",
+  "description": "JavaScript library for playing high-quality, public domain samples",
+  "main": "Notes.js",
+  "scripts": {
+    "build": "bundle-module --entry=./Notes.js --name=Notes",
+    "minify": "bundle-module --entry=./Notes.js --name=Notes --min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wilson428/Piano-Notes.git"
+  },
+  "keywords": [
+    "music",
+    "piano",
+    "audio",
+    "notes"
+  ],
+  "author": "Chris Wilson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilson428/Piano-Notes/issues"
+  },
+  "homepage": "https://github.com/wilson428/Piano-Notes#readme"
+}
