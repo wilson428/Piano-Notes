@@ -2,10 +2,11 @@
   "name": "piano-notes",
   "version": "0.0.1",
   "description": "JavaScript library for playing high-quality, public domain samples",
-  "main": "Notes.js",
+  "main": "index.js",
   "scripts": {
-    "build": "bundle-module --entry=./Notes.js --name=Notes",
-    "minify": "bundle-module --entry=./Notes.js --name=Notes --min"
+    "watch": "bundle-module --entry=./browser.js --name=Notes --watch",
+    "build": "bundle-module --entry=./browser.js --name=Notes",
+    "minify": "bundle-module --entry=./browser.js --name=Notes --min"
   },
   "repository": {
     "type": "git",
