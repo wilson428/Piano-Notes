@@ -1,14 +1,10 @@
-const Audio = require("./lib/Audio.js");
-const Notes = require("./lib/Notes.js");
-
-console.log(Audio);
+import { Notes } from './lib/Notes';
+import { Piano_2000 } from './lib/Audio';
 
 let notes = new Notes();
 
 notes.loadAudio([
-	Audio.ms500,
-	Audio.ms1000,
-	Audio.ms2000
+	Piano_2000
 ]);
 
 export default notes;
