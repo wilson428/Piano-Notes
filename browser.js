@@ -6,9 +6,9 @@ console.log(Audio);
 let notes = new Notes();
 
 notes.loadAudio([
-	Audio.NOTES_500ms,
-	Audio.NOTES_1000ms,
-	Audio.NOTES_2000ms
+	Audio.ms500,
+	Audio.ms1000,
+	Audio.ms2000
 ]);
 
 export default notes;
