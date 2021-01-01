@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "bundle-module --entry=./browser.js --name=Notes --watch",
     "build": "bundle-module --entry=./browser.js --name=Notes",
-    "minify": "bundle-module --entry=./browser.js --name=Notes --min"
+    "minify": "bundle-module --entry=./browser.js --name=Notes --min",
+    "test": "bundle-module --entry=./test/test_all.js --output_dir=./test/builds --name=Notes_All & bundle-module --entry=./test/test_500.js --name=Notes_500 --output_dir=./test/builds"
   },
   "repository": {
     "type": "git",

@@ -10,7 +10,6 @@ lerna-debug.log*
 
 samples/original/*.aiff
 
-
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
