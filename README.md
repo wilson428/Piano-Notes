@@ -46,7 +46,7 @@ You can format them all with [`./samples/format.sh`](./samples/format.sh). This 
 
 To avoid any lag or complicated paths to the modules, each duration of samples are converted to base64 and wrapped into a JSON file to be imported. To do so--again, you don't have to do this unless you're rebuilding--one runs the Node module [`convertNotes.js`](code/convertNotes.js) in the `code` directory.
 
-This produces three files in the [`data/audio`] directory: `audio_500.json`, `audio_1000.json` and `audio_2000.json`. At present, they're 1MB, 2MB and 3.9 MB respectively.
+This produces three files in the [`data/audio`](data/audio) directory: `audio_500.json`, `audio_1000.json` and `audio_2000.json`. At present, they're 1MB, 2MB and 3.9 MB respectively.
 
 ## Building the Distributions
 
