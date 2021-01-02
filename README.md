@@ -2,6 +2,34 @@
 
 JavaScript library for playing high-quality, public-domain piano note samples
 
+# Usage
+
+Install from the repo (with be on npm soon)
+
+	npm install wilson428/Piano-Notes
+
+Then import `Notes` and whichever audio samples you want:
+
+	import { Notes } from '../Piano-Notes'
+	import { Piano_500 } from '../Piano-Notes' 	// 500ms samples, ~1MB
+	import { Piano_1000 } from '../Piano-Notes'	// 1-second samples, ~2MB
+	import { Piano_2000 } from '../Piano-Notes'	// 2-second samples, ~4MB
+
+	let notes = new Notes();
+
+Then, for whichever of the samples you've imported, load them into the `notes` instance:
+
+	notes.loadAudio([ Piano_500, Piano_1000 ]); // can load either one sample or multiple in an array
+
+Then play the notes at your leisure:
+
+	notes.A4.play(500)
+	notes.Bb5.play()	// defaults to 1000ms
+
+# Samples
+
+All the samples are loaded as base64 strings in `Piano_500`, etc., so that you don't have to download a bunch of `mp3` files and locate them. The following describes the process for generating these files in case you want to add more samples, but isn't something you need to run otherwise.
+
 ## Source
 
 The [University of Iowa Electronic Music Studios](http://theremin.music.uiowa.edu/MISpiano.html) has generously provided free, high-quality `.aiff` files of all 88 notes on a Steinway & Sons Model B. These were downloaded using the [./samples/download.sh](./samples/download.sh) script, but you don't need to do this unless you want to format them differently than I have.
