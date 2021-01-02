@@ -4,7 +4,7 @@ JavaScript library for playing high-quality, public-domain piano note samples
 
 ## Source
 
-The [Univerity of Iowa Electronic Music Studios](http://theremin.music.uiowa.edu/MISpiano.html) has generously provided free, high-quality `.aiff` files of all 88 notes on a Steinway & Sons Model B. These were downloaded using the [./samples/download.sh](./samples/download.sh) script, but you don't need to do this unless you want to format them differently than I have.
+The [University of Iowa Electronic Music Studios](http://theremin.music.uiowa.edu/MISpiano.html) has generously provided free, high-quality `.aiff` files of all 88 notes on a Steinway & Sons Model B. These were downloaded using the [./samples/download.sh](./samples/download.sh) script, but you don't need to do this unless you want to format them differently than I have.
 
 ## Conversion
 
