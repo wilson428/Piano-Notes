@@ -1,5 +1,5 @@
 import { Notes } from '../lib/Notes';
-import { Piano_500 } from '../lib/Audio';
+import { Piano_500 } from '../lib/Audio/Audio_500';
 
 let notes = new Notes();
 
