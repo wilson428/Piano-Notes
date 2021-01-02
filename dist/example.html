@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Piano-Notes Example</title>
+        <style>
+body {
+    max-width: 600px;
+    font-family: Arial, serif;
+    font-size: 20px;
+}
+
+.noteGroup {
+    background-color: #EEE;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+}
+
+select {
+    font-size: 20px;
+    padding: 1px;
+    width: 140px;
+}
+
+button {
+    line-height: 24px;
+    font-size: 20px;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #808080;
+    border-radius: 3px;
+}
+
+.groupHed {
+    margin-bottom: 5px;
+    color: #808080;
+}
+        </style>
+    </head>
+    <body>
+        <div class="noteGroup" id="durations">
+            <div class="groupHed">SELECT DURATION</div>
+            <input type="radio" name="duration" class="duration" value="500">500ms
+            <input type="radio" name="duration" class="duration" value="1000" checked="checked">1000ms
+            <input type="radio" name="duration" class="duration" value="2000">2000ms
+        </div>
+
+        <div class="noteGroup" id="note_examples">
+            <div class="groupHed">PLAY A NOTE</div>
+            <button class="playNote" id="A4">A4</button>
+            <button class="playNote" id="C5">C5</button>
+            <button class="playNote" id="D2">D2</button>
+
+            <select id="chooseNote">
+                <option selected disabled>All Notes</option>
+            </select>
+        </div>
+
+        <script src="./Notes.js"></script>
+        <script>
+const select = document.getElementById("chooseNote");
+
+let DURATION = 1000;
+
+let radioGroup = document.querySelectorAll(".duration").forEach(radio => {
+    radio.addEventListener("change", function(e) {
+        DURATION = +this.value;
+    });
+});
+
+Object.keys(Notes.notes).forEach(key => {
+    let option = Object.assign(document.createElement("option"), {
+        innerHTML: key,
+        value: key
+    });
+
+    select.appendChild(option);
+});
+
+document.querySelectorAll(".playNote").forEach(button => {
+    button.addEventListener("click", function() {
+        window.Notes.notes[this.id].play(DURATION);
+    });
+});
+
+document.querySelector("#chooseNote").addEventListener('change', function() {
+    window.Notes.notes[this.value].play(DURATION);
+});
+
+
+        </script>
+    </body>
+</html>
