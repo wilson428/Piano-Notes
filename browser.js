@@ -6,7 +6,9 @@ import { Piano } from './lib/Audio/Audio';
 
 let notes = new Notes();
 
-console.log(Piano)
+console.log(Piano);
+
+console.log(notes);
 
 notes.loadAudio([
 	Piano[500],
